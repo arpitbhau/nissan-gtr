@@ -1,0 +1,355 @@
+/* JAI SIYA RAM */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Gilroy-Regular;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+#cursor {
+    position: absolute;
+    scale: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    mix-blend-mode: difference;
+    z-index: 10000000000;
+    pointer-events: none;
+}
+
+#intro-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#i1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+
+#i1-left {
+    position: relative;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    flex-direction: column;
+}
+
+#i1-left {
+    top: -20%;
+    left: 5%;
+}
+
+#i1-left h2 {
+    font-weight: 100;
+    font-size: 8rem;
+    font-family: Racing-Hard;
+}
+
+#i1-left p {
+    font-family: "911Porsche";
+    font-weight: 100;
+    position: relative;
+    left: 5%;
+    font-size: 1.5rem;
+    font-stretch: extra-expanded;
+}
+
+#i1-right {
+    position: relative;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#start-engine-btn {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 50%;
+    border: 10px solid #272626eb;
+    box-shadow: 0 0 10px cyan;
+    top: -5%;
+    left: -10%;
+    pointer-events: all;
+    cursor: pointer;
+}
+
+#start-engine-btn audio {
+    visibility: hidden;
+}
+
+#start-engine-btn span {
+    position: relative;
+    width: 40%;
+    height: 3%;
+    top: 10%;
+    border-radius: 10px;
+}
+
+#start-engine-btn #full-bar {
+    visibility: hidden;
+    background: rgb(79, 248, 79);
+    box-shadow: 0 0 10px rgb(79, 248, 79);
+}
+
+#start-engine-btn #empty-bar {
+    visibility: visible;
+    background: #3232326e;
+}
+
+/* Intro-2 */
+
+#i2 {
+    position: relative;
+    width: 100%;
+    top: 37%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#i2 h3 {
+    visibility: hidden;
+    font-size: 3rem;
+    font-weight: 100;
+    color: #fff;
+
+}
+
+#i2 h3 span {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+
+#i2 span img {
+    width: 200px;
+    opacity: 0;
+}
+
+#main {
+    position: relative;
+    visibility: hidden;
+    /* visibility: visible; */
+    width: 100%;
+    overflow-y: auto;
+}
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+#h-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+}
+
+#h-front {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 99999999;
+}
+
+#videodiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+#videodiv video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#h-video-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #00000014;
+    z-index: 1;
+}
+
+.logo {
+    width: 100px;
+}
+
+#nav {
+    position: relative;
+    width: 100%;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#n-right {
+    position: relative;
+}
+
+#n-right button {
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    font-family: Gilroy-Regular;
+    font-weight: 900;
+    background: transparent;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#n-right button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    top: 110%;
+    left: 0;
+    transition: all cubic-bezier(0.01, 1.1, 0.74, 1) 0.8s;
+    z-index: -1;
+}
+
+#n-right button:hover::after {
+    top: 0;
+    transition: all cubic-bezier(0.01, 1.1, 0.74, 1) 0.8s;
+}
+
+#n-right button:hover {
+    font-weight: 900;
+    box-shadow: 0 0 10px #fff;
+    color: #000;
+    transition: all cubic-bezier(0.01, 1.1, 0.74, 1) 0.8s;
+}
+
+#hero-text {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 80% !important;
+    margin: 0 10% !important;
+    height: 80vh;
+}
+
+#hero-text #h-t-left {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+#h-t-right {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+
+#h-t-left {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#h-t-left h1 {
+    font-family: Caveat-Regular;
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: .9;
+    letter-spacing: -2.5px;
+    mix-blend-mode: difference;
+    width: 100%;
+}
+
+#h-t-left h1:nth-child(2) {
+    font-size: 4.2rem;
+}
+
+#h-t-left h1:nth-child(2) span {
+    font-family: Racing-Hard;
+    font-size: 4.2rem;
+}
+
+#h-t-right {
+    margin-top: 3%;
+    position: relative;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.h-features {
+    position: relative;
+    width: 50%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.201);
+    border-radius: 15px;
+    color: #fff;
+}
+
+.h-features h4 {
+    font-size: 1.2rem;
+    font-family: Gilroy-Regular;
+    font-weight: 500;
+}
